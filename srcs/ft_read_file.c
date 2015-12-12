@@ -6,7 +6,7 @@
 /*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/12 14:01:39 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/12 16:39:35 by alallema         ###   ########.fr       */
+/*   Updated: 2015/12/12 20:06:53 by alallema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,8 @@ t_tetr		*ft_read_file(char *av)
 	fd = open(av, O_RDONLY);
 	tab = (char *)malloc(sizeof(char) * i + 1);
 	while (read(fd, tab, (i + 1)))
-		return (ft_create_list(tab, i));
+//		return (ft_create_list(tab, i));
+		return (ft_check_tetr(tab, i));
 	close(fd);
 	return(0);
 }

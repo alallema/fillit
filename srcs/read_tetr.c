@@ -6,7 +6,7 @@
 /*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/09 18:51:49 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/12 16:40:21 by alallema         ###   ########.fr       */
+/*   Updated: 2015/12/12 18:34:44 by alallema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,6 +118,11 @@ t_tetr	*ft_create_list(char *s, int n)
 	int		i;
 
 	i = 0;
+	while (s[i])
+	{
+		if (i % 21 == 0 && s[i] != 0)
+			return (NULL);
+	}
 	while (s[i] && i < n)
 	{
 		if (i == 0)
