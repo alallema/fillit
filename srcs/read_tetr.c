@@ -6,7 +6,7 @@
 /*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/09 18:51:49 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/12 14:10:17 by alallema         ###   ########.fr       */
+/*   Updated: 2015/12/12 15:06:10 by alallema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,26 +16,6 @@
 #include <stdlib.h>
 #include <libft.h>
 #include <main.h>
-
-void	ft_print_list(t_tetr *tetr)
-{
-	int	i;
-
-	i = 0;
-	while (tetr)
-	{
-		while (tetr->pattern[i])
-		{
-			ft_putstr(tetr->pattern[i]);
-			ft_putchar('\n');
-			i++;
-		}
-		ft_putchar(tetr->letter);
-		ft_putchar('\n');
-		tetr = tetr->next;
-		i = 0;
-	}
-}
 
 char	*ft_cut_str(char *tab)
 {
@@ -130,7 +110,7 @@ char	**ft_create_tab(char *tab)
 	return (ft_cut_tab2(tab2));
 }
 
-void	ft_create_list(char *tab, int n)
+t_tetr	*ft_create_list(char *tab, int n)
 {
 	t_tetr	*tetr;
 	int		i;
@@ -147,4 +127,5 @@ void	ft_create_list(char *tab, int n)
 		i++;
 	}
 	ft_print_list(tetr);
+	return (tetr);
 }

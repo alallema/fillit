@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_print_list.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/05 15:50:20 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/12 14:49:47 by alallema         ###   ########.fr       */
+/*   Created: 2015/12/12 14:50:42 by alallema          #+#    #+#             */
+/*   Updated: 2015/12/12 14:52:57 by alallema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 #include <main.h>
 
-int		main(int argc, char **argv)
+void    ft_print_list(t_tetr *tetr)
 {
-	t_tetr *tetr;
-
-	if (argc != 2)
-		ft_putstr("error\n");
-	if (argc == 2)
-		tetr = ft_read_file(argv[1]);
-	return (0);
+	int i;
+	
+	i = 0;
+	while (tetr)
+	{
+		while (tetr->pattern[i])
+		{
+			ft_putstr(tetr->pattern[i]);
+			ft_putchar('\n');
+			i++;
+		}
+		ft_putchar(tetr->letter);
+		ft_putchar('\n');
+		tetr = tetr->next;
+		i = 0;
+	}
 }

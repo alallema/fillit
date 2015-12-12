@@ -6,7 +6,7 @@
 /*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/12 14:01:39 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/12 14:09:21 by alallema         ###   ########.fr       */
+/*   Updated: 2015/12/12 15:03:13 by alallema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@
 #include <libft.h>
 #include <main.h>
 
-void    ft_read_file(char *av)
+t_tetr		*ft_read_file(char *av)
 {
-	int     fd;
-	char    buf;
-	char    *tab;
-	int     i;
-	
+	int		fd;
+	char	buf;
+	char	*tab;
+	int		i;
+
 	i = 0;
 	fd = open(av, O_RDONLY);
 	if (fd == -1)
@@ -30,13 +30,14 @@ void    ft_read_file(char *av)
 	while (read(fd, &buf, 1))
 	{
 		if (buf != '.' && buf != '#' && buf != '\n')
-			return ;
+			return (NULL);
 		i++;
 	}
 	close(fd);
 	fd = open(av, O_RDONLY);
 	tab = (char *)malloc(sizeof(char) * i + 1);
 	while (read(fd, tab, (i + 1)))
-		ft_create_list(tab, i);
-	close(fd);
+		return (ft_create_list(tab, i));
+//	close(fd);
+	return(0);
 }
