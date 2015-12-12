@@ -6,7 +6,7 @@
 /*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/09 13:12:20 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/12 15:04:27 by alallema         ###   ########.fr       */
+/*   Updated: 2015/12/12 16:21:07 by alallema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@
 
 typedef struct			s_tetr
 {
-	int					id;
 	char				letter;
-	char				**pattern;
+	int					**pattern;
+	int					*pos;
 	struct s_tetr		*next;
 }						t_tetr;
 
