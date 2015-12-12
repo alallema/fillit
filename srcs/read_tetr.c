@@ -6,7 +6,7 @@
 /*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/09 18:51:49 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/12 15:33:08 by alallema         ###   ########.fr       */
+/*   Updated: 2015/12/12 16:40:21 by alallema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_cut_str(char *s)
 	int	i;
 
 	i = ft_strlen((char *)s);
-	while (tab[i] != '#')
+	while (s[i] != '#')
 		i--;
 	ft_putnbr(i);
 	ft_putchar('\n');
