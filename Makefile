@@ -6,7 +6,7 @@
 #    By: rpallies <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/24 12:56:26 by rpallies          #+#    #+#              #
-#    Updated: 2015/12/12 12:39:57 by alallema         ###   ########.fr        #
+#    Updated: 2015/12/12 14:07:58 by alallema         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,7 @@ SDIR =		./srcs/
 SRCS =		read_tetr.c				\
 			ft_create_elem.c		\
 			ft_lst_pushback.c		\
+			ft_read_file.c			\
 
 SRCC =		$(addprefix $(SDIR),$(SRCS))
 

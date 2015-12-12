@@ -6,7 +6,7 @@
 /*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/09 13:12:20 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/12 12:38:35 by alallema         ###   ########.fr       */
+/*   Updated: 2015/12/12 14:05:36 by alallema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ typedef struct			s_tetr
 void					ft_lst_pushback(t_tetr **begin, char **data);
 t_tetr					*ft_create_elem(char **pattern, char letter);
 t_tetr					*ft_check_tab(char *s, int n);
+void					ft_create_list(char *tab, int n);
 void					ft_read_file(char *av);
 
 #endif
