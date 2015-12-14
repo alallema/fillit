@@ -44,14 +44,14 @@ void    writer(char **tab, t_tetr *tetr,int ty,int tx,int op);
 
 char	*ft_strnew(size_t size)
 {
-	int		i;
+	size_t	i;
 	char	*ptr;
 
 	ptr = (char *)malloc(sizeof(char) * (size + 1));
 	if (ptr)
 	{
 		i = 0;
-		while (ptr[i])
+		while (i < (size + 1))
 		{
 			ptr[i] = '\0';
 			i++;
@@ -169,24 +169,26 @@ void	resolver(t_tetr *tetr)
 	int i;
 
 
-	i = 0;
 	tab = (char **)malloc(sizeof(char *) * 101);
+	i = 0;
 	while (i < 101)
 	{
 		tab[i] = ft_strnew(100);
 		i++;
 	}
+	tab[i] = NULL;
 	i = 0;
 	while (i < 4)
 	{
-		ft_strcpy(tab[i], "....\0");
+		ft_strcpy(tab[i], "....\n");
 		i++;
 	}
 	i = 0;
 	printf("start prog\n");
-	while (i < 4)
+	i = 0;
+	while (tab[i])
 	{
-		printf("%s\n", tab[i]);
+		printf("%s", tab[i]);
 		i++;
 	}
 	//	while (1)
@@ -194,9 +196,9 @@ void	resolver(t_tetr *tetr)
 	placeur(tab, tetr, 4);
 	i = 0;
 	printf("end program\n");
-	while (i < 4)
+	while (tab[i])
 	{
-		printf("%s\n", tab[i]);
+		printf("%s", tab[i]);
 		i++;
 	}
 }
@@ -207,10 +209,11 @@ int		placeur(char **tab, t_tetr *tetr, int nb_tetr)
 	int	x;
 	int	placed;
 
+	printf("start placeur\n");
 	int i = 0;
 	while (tab[i])
 	{
-		printf("%s\n", tab[i]);
+		printf("%s", tab[i]);
 		i++;
 	}
 	printf("placeur called\n");
@@ -220,7 +223,7 @@ int		placeur(char **tab, t_tetr *tetr, int nb_tetr)
 		printf("%c\n", tab[y][0]);
 		printf("%d\n", y);
 		x = 0;
-		while (tab[y][x] == '.')
+		while (tab[y][x])
 		{
 			printf("try place %c in y= %d x= %d", tetr->letter, y, x);
 			if (check_place(tab, tetr, y, x))
@@ -229,7 +232,7 @@ int		placeur(char **tab, t_tetr *tetr, int nb_tetr)
 				printf("placeable return ok\n");
 				writer(tab, tetr, y, x, 1);
 				int i = 0;
-				while (i < 4)
+				while (tab[i])
 				{
 					printf("%s\n", tab[i]);
 					i++;
@@ -263,7 +266,7 @@ int		check_place(char **tab, t_tetr *tetr, int ty, int tx)
 	while (i < 4 && placeable)
 	{
 		y = tetr->pattern[i][0];
-		printf("y = %d", y);
+		printf("y = %d and ", y);
 		x = tetr->pattern[i][1];
 		printf("x = %d\n", x);
 		if (tab[ty + y][tx + x] != '.')
