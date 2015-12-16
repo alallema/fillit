@@ -6,14 +6,14 @@
 /*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/05 13:57:13 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/10 12:51:38 by alallema         ###   ########.fr       */
+/*   Updated: 2015/12/16 16:50:10 by alallema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.h"
 #include <stdlib.h>
 
-t_tetr		*ft_create_elem(char **pattern, char letter)
+t_tetr		*ft_create_elem(int **pattern, char letter)
 {
 	t_tetr	*elem;
 

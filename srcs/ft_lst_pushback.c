@@ -6,7 +6,7 @@
 /*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/05 13:51:33 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/10 12:57:11 by alallema         ###   ########.fr       */
+/*   Updated: 2015/12/16 16:50:25 by alallema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void		ft_lst_pushback(t_tetr **begin_list, char **data)
+void		ft_lst_pushback(t_tetr **begin_list, int **data)
 {
 	t_tetr	*elem;
 	char	c;

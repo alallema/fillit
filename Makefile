@@ -6,7 +6,7 @@
 #    By: rpallies <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/24 12:56:26 by rpallies          #+#    #+#              #
-#    Updated: 2015/12/12 20:10:31 by alallema         ###   ########.fr        #
+#    Updated: 2015/12/16 17:25:04 by alallema         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,8 +28,7 @@ INCS =		libft.h					\
 INCC =		$(addprefix $(IDIR),$(INCS))
 
 SDIR =		./srcs/
-SRCS =		read_tetr.c				\
-			ft_create_elem.c		\
+SRCS =		ft_create_elem.c		\
 			ft_lst_pushback.c		\
 			ft_read_file.c			\
 			ft_print_list.c			\
