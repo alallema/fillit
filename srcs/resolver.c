@@ -6,7 +6,7 @@
 /*   By: schiad <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/12 16:05:09 by schiad            #+#    #+#             */
-/*   Updated: 2015/12/17 20:08:12 by schiad           ###   ########.fr       */
+/*   Updated: 2015/12/17 20:46:49 by schiad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -213,13 +213,19 @@ void		resolver(t_tetr *tetr, int nb)
 		retour = placeur(tab, tetr, nb);
 		i++;
 	}
+	//	while (i < 4)
+	//	{
+	//		ft_strcpy(tab[i], "....\n");
+	//		i++;
+	//	}
 	i = 0;
-	printf("end program\n");
 	while (tab[i])
 	{
 		printf("%s", tab[i]);
 		i++;
 	}
+
+	printf("start prog\n");
 }
 
 int			placeur(char **tab, t_tetr *tetr, int nb_tetr)
