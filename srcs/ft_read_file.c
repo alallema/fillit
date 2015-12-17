@@ -6,7 +6,7 @@
 /*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/12 14:01:39 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/16 17:32:56 by alallema         ###   ########.fr       */
+/*   Updated: 2015/12/17 12:20:11 by alallema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_tetr		*ft_read_file(char *av)
 {
 	int		fd;
 	char	buf;
-	char	*tab;
+	char	*s;
 	int		i;
 
 	i = 0;
@@ -29,18 +29,17 @@ t_tetr		*ft_read_file(char *av)
 		ft_putstr("invalid file");
 	while (read(fd, &buf, 1))
 	{
+		if (buf == 0)
+			return (NULL);
 		if (buf != '.' && buf != '#' && buf != '\n')
 			return (NULL);
 		i++;
 	}
 	close(fd);
 	fd = open(av, O_RDONLY);
-	tab = (char *)malloc(sizeof(char) * i + 1);
-	while (read(fd, tab, (i + 1)))
-	{
-//		return (ft_create_list(tab, i));
-		return (ft_check_tetr(tab, i));
-	}
+	s = (char *)malloc(sizeof(char) * i + 1);
+	while (read(fd, s, (i + 1)))
+		return (ft_check_tetr(s, i));
 	close(fd);
-	return(0);
+	return (0);
 }

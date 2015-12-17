@@ -6,13 +6,13 @@
 /*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/05 13:51:33 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/16 16:50:25 by alallema         ###   ########.fr       */
+/*   Updated: 2015/12/17 12:13:30 by alallema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "main.h"
+#include <main.h>
 #include <stdlib.h>
-#include <stdio.h>
+#include <libft.h>
 
 void		ft_lst_pushback(t_tetr **begin_list, int **data)
 {
@@ -21,9 +21,9 @@ void		ft_lst_pushback(t_tetr **begin_list, int **data)
 
 	c = 'B';
 	elem = *begin_list;
-	if (*begin_list == NULL)
-		*begin_list = ft_create_elem(data, c);
-	else
+	if (data == NULL)
+		*begin_list = NULL;
+	if (*begin_list != NULL)
 	{
 		while (elem->next)
 		{

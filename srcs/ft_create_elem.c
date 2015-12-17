@@ -6,7 +6,7 @@
 /*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/05 13:57:13 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/16 16:50:10 by alallema         ###   ########.fr       */
+/*   Updated: 2015/12/17 12:18:56 by alallema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ t_tetr		*ft_create_elem(int **pattern, char letter)
 	t_tetr	*elem;
 
 	elem = (t_tetr*)malloc(sizeof(t_tetr));
+	if (pattern == NULL)
+		return (NULL);
 	if (elem != NULL)
 	{
 		elem->letter = letter;
