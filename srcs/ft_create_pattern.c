@@ -6,7 +6,7 @@
 /*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/12 15:29:29 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/18 11:41:39 by alallema         ###   ########.fr       */
+/*   Updated: 2015/12/18 14:56:42 by alallema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,10 +92,8 @@ int		**ft_create_tab(char **tab, int x, int y)
 
 	i = 0;
 	j = 0;
-	pattern = (int **)malloc(sizeof(int **) * 4);
-	if (pattern == NULL)
-		return (pattern);
-	if (ft_check_valid(tab, 0, 0, 0) == 0)
+	pattern = (int **)malloc(sizeof(pattern) * 5);
+	if (pattern == NULL || ft_check_valid(tab, 0, 0, 0) == 0)
 		return (NULL);
 	while (tab[i])
 	{
