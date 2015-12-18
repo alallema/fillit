@@ -184,8 +184,9 @@ int			main()
 	ft_new_elem(tetr, (int **)t4, 'H');
 	ft_new_elem(tetr, (int **)t4, 'I');
 	ft_new_elem(tetr, (int **)t4, 'J');
+	ft_new_elem(tetr, (int **)t4, 'K');
 	printf("a\n");
-	resolver(tetr, 10);
+	resolver(tetr, 11);
 }
 
 void		resolver(t_tetr *tetr, int nb)
