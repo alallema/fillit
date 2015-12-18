@@ -6,7 +6,7 @@
 /*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/12 14:01:39 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/18 14:56:56 by alallema         ###   ########.fr       */
+/*   Updated: 2015/12/18 15:32:05 by alallema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ t_tetr      *ft_create_list(char *s, int n)
 			ft_lst_pushback(&tetr, ft_create_pattern(&s[i]));
 		i++;
 	}
-	ft_print_list(tetr);
+//	ft_print_list(tetr);
 	return (tetr);
 }
 

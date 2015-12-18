@@ -6,7 +6,7 @@
 #    By: rpallies <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/24 12:56:26 by rpallies          #+#    #+#              #
-#    Updated: 2015/12/17 17:41:12 by alallema         ###   ########.fr        #
+#    Updated: 2015/12/18 15:19:58 by alallema         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ SRCS =		ft_create_elem.c		\
 			ft_print_list.c			\
 			ft_create_pattern.c		\
 			ft_check_pattern.c		\
+			ft_lst_size.c			\
 
 SRCC =		$(addprefix $(SDIR),$(SRCS))
 
