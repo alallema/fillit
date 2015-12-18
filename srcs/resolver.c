@@ -86,7 +86,7 @@ void		ft_new_elem(t_tetr *alte, int **pattern, char letter)
 {
 	t_tetr *tmp;
 
-	printf("new %c\n", letter);
+//	printf("new %c\n", letter);
 	tmp = alte;
 	while (tmp->next)
 	{
@@ -94,13 +94,13 @@ void		ft_new_elem(t_tetr *alte, int **pattern, char letter)
 	}
 	tmp->next = ft_create_elem(pattern, letter);
 
-	printf("new %c\n", letter);
+//	printf("new %c\n", letter);
 }
 
 t_tetr		*ft_create_elem(int **pattern, char letter)
 {
 	t_tetr	*elem;
-	printf("create %c\n", letter);
+//	printf("create %c\n", letter);
 	int *pos;
 
 	pos = (int *)malloc(sizeof(int) * 2);
@@ -114,7 +114,7 @@ t_tetr		*ft_create_elem(int **pattern, char letter)
 		elem->pos[1] = 0;
 		elem->next = NULL;
 	}
-	printf("created %c\n", letter);
+//	printf("created %c\n", letter);
 	return (elem);
 }
 
@@ -175,11 +175,17 @@ int			main()
 	t4[2][0] = 1; t4[2][1] = 1;
 	t4[3][0] = 1; t4[3][1] = 2;
 	tetr = ft_create_elem((int **)t1, 'A');
-	ft_new_elem(tetr, (int **)t2, 'B');
-	ft_new_elem(tetr, (int **)t3, 'C');
-	ft_new_elem(tetr, (int **)t4, 'D');
+	ft_new_elem(tetr, (int **)t1, 'B');
+	ft_new_elem(tetr, (int **)t2, 'C');
+	ft_new_elem(tetr, (int **)t2, 'D');
+	ft_new_elem(tetr, (int **)t3, 'E');
+	ft_new_elem(tetr, (int **)t3, 'F');
+	ft_new_elem(tetr, (int **)t4, 'G');
+	ft_new_elem(tetr, (int **)t4, 'H');
+	ft_new_elem(tetr, (int **)t4, 'I');
+	ft_new_elem(tetr, (int **)t4, 'J');
 	printf("a\n");
-	resolver(tetr, 4);
+	resolver(tetr, 10);
 }
 
 void		resolver(t_tetr *tetr, int nb)
@@ -262,7 +268,7 @@ int			placeur(char **tab, t_tetr *tetr, int nb_tetr)
 
 int			check_place(char **tab, t_tetr *tetr, int ty, int tx)
 {
-	printf("checkplace called\n");
+//	printf("checkplace called\n");
 	int	placeable;
 	int	x;
 	int	y;
@@ -273,21 +279,21 @@ int			check_place(char **tab, t_tetr *tetr, int ty, int tx)
 	while (i < 4 && placeable)
 	{
 		y = tetr->pattern[i][0];
-		printf("y = %d and ", y);
+//		printf("y = %d and ", y);
 		x = tetr->pattern[i][1];
-		printf("x = %d\n", x);
+//		printf("x = %d\n", x);
 		if (tab[ty + y][tx + x] != '.')
 			placeable = 0;
-		printf("i = %d, place = %d\n", i, placeable);
+//		printf("i = %d, place = %d\n", i, placeable);
 		i++;
 	}
-	printf("end check place %d\n", placeable);
+//	printf("end check place %d\n", placeable);
 	return (placeable);
 }
 
 void		remover(char **tab, t_tetr *tetr, int ty, int tx)
 {
-	printf("startwriter\n");
+//	printf("startwriter\n");
 	int	i;
 	int	x;
 	int	y;
@@ -295,7 +301,7 @@ void		remover(char **tab, t_tetr *tetr, int ty, int tx)
 	i = 0;
 	while (i < 4)
 	{
-		printf("writer i = %d\n", i);
+//		printf("writer i = %d\n", i);
 		y = tetr->pattern[i][0];
 		x = tetr->pattern[i][1];
 		tab[ty + y][tx + x] = '.';
@@ -305,7 +311,7 @@ void		remover(char **tab, t_tetr *tetr, int ty, int tx)
 
 void		writer(char **tab, t_tetr *tetr, int ty, int tx)
 {
-	printf("startwriter\n");
+//	printf("startwriter\n");
 	int	i;
 	int	x;
 	int	y;
@@ -313,7 +319,7 @@ void		writer(char **tab, t_tetr *tetr, int ty, int tx)
 	i = 0;
 	while (i < 4)
 	{
-		printf("writer i = %d\n", i);
+//		printf("writer i = %d\n", i);
 		y = tetr->pattern[i][0];
 		x = tetr->pattern[i][1];
 		tab[ty + y][tx + x] = tetr->letter;
