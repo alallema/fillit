@@ -6,7 +6,7 @@
 /*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/09 13:12:20 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/17 17:58:09 by alallema         ###   ########.fr       */
+/*   Updated: 2015/12/17 21:08:26 by alallema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ t_tetr					*ft_check_tab(char *s, int n);
 t_tetr					*ft_create_list(char *tab, int n);
 t_tetr					*ft_read_file(char *av);
 int						**ft_create_pattern(char *str);
-int						**ft_check_pattern(int **pattern);
+void					ft_check_pattern(int **pattern);
 
 #endif

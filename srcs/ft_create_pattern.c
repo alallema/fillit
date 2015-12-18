@@ -6,7 +6,7 @@
 /*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/12 15:29:29 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/17 17:58:30 by alallema         ###   ########.fr       */
+/*   Updated: 2015/12/18 11:41:39 by alallema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,14 +92,14 @@ int		**ft_create_tab(char **tab, int x, int y)
 
 	i = 0;
 	j = 0;
-	pattern = (int **)malloc(sizeof(int **) * 5);
+	pattern = (int **)malloc(sizeof(int **) * 4);
 	if (pattern == NULL)
 		return (pattern);
 	if (ft_check_valid(tab, 0, 0, 0) == 0)
 		return (NULL);
 	while (tab[i])
 	{
-		pattern[x] = (int *)malloc(sizeof(int *) * 3);
+		pattern[x] = (int *)malloc(sizeof(int *) * 2);
 		if (tab[i][j] == '#')
 		{
 			pattern[x][y--] = j;
@@ -110,7 +110,7 @@ int		**ft_create_tab(char **tab, int x, int y)
 		if (j == 5 && i++ < 4)
 			j = 0;
 	}
-	pattern = ft_check_pattern(pattern);
+	ft_check_pattern(pattern);
 	return (pattern);
 }
 

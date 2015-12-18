@@ -6,7 +6,7 @@
 /*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/12 14:01:39 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/17 17:40:48 by alallema         ###   ########.fr       */
+/*   Updated: 2015/12/17 19:56:58 by alallema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,8 @@ t_tetr		*ft_read_file(char *av)
 		if (buf == 0)
 			return (NULL);
 		if (buf != '.' && buf != '#' && buf != '\n')
+			return (NULL);
+		if (i > 560)
 			return (NULL);
 		i++;
 	}
