@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lst_size.c                                      :+:      :+:    :+:   */
+/*   ft_free_square.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: schiad <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/18 15:13:45 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/19 13:52:02 by schiad           ###   ########.fr       */
+/*   Created: 2015/12/19 13:28:30 by schiad            #+#    #+#             */
+/*   Updated: 2015/12/19 13:40:27 by schiad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <main.h>
-
-int		ft_lst_size(t_tetr *tetr)
+void	ft_free_square(char **tab)
 {
 	int i;
 
 	i = 0;
-	while (tetr)
+	while (tab[i])
 	{
+		free(tab[i]);
 		i++;
-		tetr = tetr->next;
 	}
-	return (i);
+	free(tab[i]);
+	free(tab);
 }

@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lst_size.c                                      :+:      :+:    :+:   */
+/*   ft_square_char_filler.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: schiad <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/18 15:13:45 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/19 13:52:02 by schiad           ###   ########.fr       */
+/*   Created: 2015/12/19 13:25:21 by schiad            #+#    #+#             */
+/*   Updated: 2015/12/19 13:50:09 by schiad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <main.h>
 
-int		ft_lst_size(t_tetr *tetr)
+void	ft_square_char_filler(char **tab, int nb)
 {
-	int i;
+	int	j;
 
-	i = 0;
-	while (tetr)
+	tmp = (char *)malloc(sizeof(char) * (i + 1));
+	ft_strncpyendl(tmp, ".................................", i);
+	j = 0;
+	while (j < nb)
 	{
-		i++;
-		tetr = tetr->next;
+		ft_strcpy(tab[j], tmp);
+		j++;
 	}
-	return (i);
+	free(tmp);
 }

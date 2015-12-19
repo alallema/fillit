@@ -6,18 +6,18 @@
 /*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/12 14:50:42 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/18 15:31:21 by alallema         ###   ########.fr       */
+/*   Updated: 2015/12/19 13:54:34 by schiad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 #include <main.h>
 
-void    ft_print_list(t_tetr *tetr)
+void	ft_print_list(t_tetr *tetr)
 {
 	int i;
 	int j;
-	
+
 	while (tetr)
 	{
 		i = 0;

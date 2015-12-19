@@ -6,7 +6,7 @@
 /*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/12 15:29:29 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/18 14:56:42 by alallema         ###   ########.fr       */
+/*   Updated: 2015/12/19 14:04:19 by schiad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int		ft_check_pos(char **tab, int x, int y)
 	return (ret);
 }
 
-int		ft_check_valid(char	**tab, int i, int j, int n)
+int		ft_check_valid(char **tab, int i, int j, int n)
 {
 	int	pos[4];
 
@@ -71,7 +71,7 @@ int		ft_check_valid(char	**tab, int i, int j, int n)
 			j = 0;
 	}
 	n = 0;
-	while(pos[n])
+	while (pos[n])
 	{
 		if (pos[n] == 0)
 			return (0);
