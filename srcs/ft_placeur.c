@@ -6,9 +6,11 @@
 /*   By: schiad <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/19 13:47:11 by schiad            #+#    #+#             */
-/*   Updated: 2015/12/19 13:56:07 by schiad           ###   ########.fr       */
+/*   Updated: 2015/12/19 17:36:18 by schiad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <main.h>
 
 int		ft_placeur(char **tab, t_tetr *tetr, int nb_tetr)
 {
@@ -25,7 +27,7 @@ int		ft_placeur(char **tab, t_tetr *tetr, int nb_tetr)
 			if (ft_check_place(tab, tetr, y, x))
 			{
 				placed = 1;
-				writer(tab, tetr, y, x);
+				ft_writer(tab, tetr, y, x);
 				if (!tetr->next)
 					return (placed);
 				else

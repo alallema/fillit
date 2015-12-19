@@ -6,9 +6,11 @@
 /*   By: schiad <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/19 13:44:17 by schiad            #+#    #+#             */
-/*   Updated: 2015/12/19 13:57:16 by schiad           ###   ########.fr       */
+/*   Updated: 2015/12/19 17:37:21 by schiad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <main.h>
 
 void	ft_remover(char **tab, t_tetr *tetr, int ty, int tx)
 {

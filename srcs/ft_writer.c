@@ -6,9 +6,11 @@
 /*   By: schiad <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/19 13:42:25 by schiad            #+#    #+#             */
-/*   Updated: 2015/12/19 13:44:01 by schiad           ###   ########.fr       */
+/*   Updated: 2015/12/19 17:36:56 by schiad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <main.h>
 
 void	ft_writer(char **tab, t_tetr *tetr, int ty, int tx)
 {

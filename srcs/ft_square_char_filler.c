@@ -6,18 +6,21 @@
 /*   By: schiad <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/19 13:25:21 by schiad            #+#    #+#             */
-/*   Updated: 2015/12/19 13:50:09 by schiad           ###   ########.fr       */
+/*   Updated: 2015/12/19 17:47:39 by schiad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <libft.h>
 #include <main.h>
 
-void	ft_square_char_filler(char **tab, int nb)
+void		ft_square_char_filler(char **tab, int nb)
 {
-	int	j;
+	int		j;
+	char	*tmp;
 
-	tmp = (char *)malloc(sizeof(char) * (i + 1));
-	ft_strncpyendl(tmp, ".................................", i);
+	tmp = (char *)malloc(sizeof(char) * (nb + 1));
+	ft_strncpy(tmp, ".................................", nb);
+	tmp[nb + 1] = '\n';
 	j = 0;
 	while (j < nb)
 	{
