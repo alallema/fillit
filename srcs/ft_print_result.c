@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lst_size.c                                      :+:      :+:    :+:   */
+/*   ft_print_result.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: schiad <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/18 15:13:45 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/19 13:52:02 by schiad           ###   ########.fr       */
+/*   Created: 2015/12/19 13:18:35 by schiad            #+#    #+#             */
+/*   Updated: 2015/12/19 13:28:12 by schiad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <main.h>
 
-int		ft_lst_size(t_tetr *tetr)
+void	ft_print_result(char **tab)
 {
 	int i;
 
 	i = 0;
-	while (tetr)
+	while (tab[i])
 	{
+		ft_putendl(tab[i]);
 		i++;
-		tetr = tetr->next;
 	}
-	return (i);
 }

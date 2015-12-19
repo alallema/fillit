@@ -6,7 +6,7 @@
 /*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/12 14:01:39 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/18 15:32:05 by alallema         ###   ########.fr       */
+/*   Updated: 2015/12/19 14:01:58 by schiad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@
 #include <libft.h>
 #include <main.h>
 
-t_tetr      *ft_create_list(char *s, int n)
+t_tetr		*ft_create_list(char *s, int n)
 {
-	int     i;
-	t_tetr  *tetr;
-	
+	int		i;
+	t_tetr	*tetr;
+
 	i = 0;
 	while (s[i] && i < n)
 	{

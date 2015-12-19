@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lst_size.c                                      :+:      :+:    :+:   */
+/*   resolver.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: schiad <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/18 15:13:45 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/19 13:52:02 by schiad           ###   ########.fr       */
+/*   Created: 2015/12/12 16:05:09 by schiad            #+#    #+#             */
+/*   Updated: 2015/12/19 14:17:43 by schiad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <main.h>
 
-int		ft_lst_size(t_tetr *tetr)
+void		ft_resolver(t_tetr *tetr, int nb)
 {
-	int i;
+	char	**tab;
+	char	*tmp;
+	int		i;
+	int		j;
+	int		retour;
 
-	i = 0;
-	while (tetr)
+	tab = ft_square_char_tab(33);
+	i = 1;
+	while (!retour)
 	{
+		ft_square_char_filler(tab, i);
+		retour = ft_placeur(tab, tetr, nb);
 		i++;
-		tetr = tetr->next;
 	}
-	return (i);
+	ft_print_result(tab);
+	ft_free_square(tab);
 }

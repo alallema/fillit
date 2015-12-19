@@ -6,7 +6,7 @@
 /*   By: schiad <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/12 16:05:09 by schiad            #+#    #+#             */
-/*   Updated: 2015/12/16 20:25:27 by alallema         ###   ########.fr       */
+/*   Updated: 2015/12/17 19:09:15 by schiad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,24 @@ void	resolver(t_tetr *tetr);
 int		check_place(char **tab, t_tetr *tetr, int ty, int tx);
 int		placeur(char **tab, t_tetr *tetr, int nb_tetr);
 void    writer(char **tab, t_tetr *tetr,int ty,int tx,int op);
+
+char    *ft_strncpy(char *dst, const char *src, size_t n)
+{
+	size_t  i;
+
+	i = 0;
+	while (src[i] && i < n)
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dst[i] = '\0';
+		i++;
+	}
+	return (dst);
+}
 
 char	*ft_strnew(size_t size)
 {
@@ -166,7 +184,9 @@ int		main()
 void	resolver(t_tetr *tetr)
 {
 	char	**tab;
+	char	*tmp;
 	int i;
+	int	retour = 0;
 
 
 	tab = (char **)malloc(sizeof(char *) * 101);
@@ -178,11 +198,19 @@ void	resolver(t_tetr *tetr)
 	}
 	tab[i] = NULL;
 	i = 0;
-	while (i < 4)
+	while (!retour)
 	{
-		ft_strcpy(tab[i], "....\n");
+		tmp = (char *)malloc(sizeof(char) * (i + 1));
+		ft_strncpy(tmp, ".................................................................................................................................................................................................................", i);
+		ft_strcpy(tab[i], tmp);
+		retour = placeur(tab, tetr, 4);
 		i++;
 	}
+	//	while (i < 4)
+	//	{
+	//		ft_strcpy(tab[i], "....\n");
+	//		i++;
+	//	}
 	i = 0;
 	printf("start prog\n");
 	i = 0;
@@ -193,7 +221,7 @@ void	resolver(t_tetr *tetr)
 	}
 	//	while (1)
 	//		;
-	placeur(tab, tetr, 4);
+	printf("return placeur :%d\n", placeur(tab, tetr, 4));
 	i = 0;
 	printf("end program\n");
 	while (tab[i])
