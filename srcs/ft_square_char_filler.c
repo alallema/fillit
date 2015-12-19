@@ -6,7 +6,7 @@
 /*   By: schiad <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/19 13:25:21 by schiad            #+#    #+#             */
-/*   Updated: 2015/12/19 17:47:39 by schiad           ###   ########.fr       */
+/*   Updated: 2015/12/19 20:05:42 by schiad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void		ft_square_char_filler(char **tab, int nb)
 
 	tmp = (char *)malloc(sizeof(char) * (nb + 1));
 	ft_strncpy(tmp, ".................................", nb);
-	tmp[nb + 1] = '\n';
+	tmp[nb] = '\n';
 	j = 0;
 	while (j < nb)
 	{

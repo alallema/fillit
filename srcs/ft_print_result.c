@@ -6,7 +6,7 @@
 /*   By: schiad <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/19 13:18:35 by schiad            #+#    #+#             */
-/*   Updated: 2015/12/19 17:48:06 by schiad           ###   ########.fr       */
+/*   Updated: 2015/12/19 19:25:53 by schiad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_print_result(char **tab)
 	i = 0;
 	while (tab[i])
 	{
-		ft_putendl(tab[i]);
+		ft_putstr(tab[i]);
 		i++;
 	}
 }
