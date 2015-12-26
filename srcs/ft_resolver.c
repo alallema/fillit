@@ -24,6 +24,7 @@ void		ft_resolver(t_tetr *tetr, int nb)
 	i = 0;
 	while (((i / 2) * (i / 2)) < nb)
 		i++;
+	i--;
 	while (!retour)
 	{
 		ft_square_char_filler(tab, i);
