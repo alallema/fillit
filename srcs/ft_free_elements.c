@@ -1,37 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   resolver.c                                         :+:      :+:    :+:   */
+/*   ft_free_elements.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schiad <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/12 16:05:09 by schiad            #+#    #+#             */
-/*   Updated: 2015/12/26 17:29:52 by schiad           ###   ########.fr       */
+/*   Created: 2015/12/26 17:07:12 by schiad            #+#    #+#             */
+/*   Updated: 2015/12/26 17:28:42 by schiad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <stdlib.h>
 #include <main.h>
 
-void		ft_resolver(t_tetr *tetr, int nb)
+void	ft_free_elements(t_tetr *elem)
 {
-	char	**tab;
-	int		i;
-	int		retour;
+	t_tetr	*next;
 
-	retour = 0;
-	tab = ft_square_char_tab(33);
-	i = 0;
-	while (((i / 2) * (i / 2)) < nb)
-		i++;
-	i--;
-	while (!retour)
-	{
-		ft_square_char_filler(tab, i);
-		retour = ft_placeur(tab, tetr, nb);
-		i++;
-	}
-	ft_print_result(tab);
-	ft_free_square(tab);
-	ft_free_elements(tetr);
+	next = elem->next;
+	free (elem);
+	if (next)
+		ft_free_elements(next);
 }
