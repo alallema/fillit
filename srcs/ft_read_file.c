@@ -6,7 +6,7 @@
 /*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/12 14:01:39 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/20 15:10:07 by schiad           ###   ########.fr       */
+/*   Updated: 2015/12/27 16:50:55 by schiad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ t_tetr		*ft_create_list(char *s, int n)
 			ft_lst_pushback(&tetr, ft_create_pattern(&s[i]));
 		i++;
 	}
-//	ft_print_list(tetr);
 	return (tetr);
 }
 
@@ -47,6 +46,7 @@ t_tetr		*ft_read_file(char *av)
 	char	buf;
 	char	*s;
 	int		i;
+//	t_tetr	*tetr;
 
 	i = 0;
 	fd = open(av, O_RDONLY);
@@ -65,6 +65,12 @@ t_tetr		*ft_read_file(char *av)
 	s = (char *)malloc(sizeof(char) * i + 1);
 	while (read(fd, s, (i + 1)))
 		return (ft_create_list(s, i));
+//	while (read(fd, s, (i + 1)) && (tetr = ft_create_list(s, i, tetr)))
+//	{
+//		if (tetr == NULL)
+//			return (0);
+//	}
 	close(fd);
+	free(s);
 	return (0);
 }
