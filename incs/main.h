@@ -6,7 +6,7 @@
 /*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/09 13:12:20 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/27 16:12:05 by schiad           ###   ########.fr       */
+/*   Updated: 2015/12/27 17:20:17 by schiad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ typedef struct			s_tetr
 }						t_tetr;
 
 void					ft_resolver(t_tetr *tetr, int nb);
-int						ft_check_place(char **tab, t_tetr *tetr, int ty, int tx);
+int						ft_check_place(char **tab,
+		t_tetr *tetr, int ty, int tx);
 int						ft_placeur(char **tab, t_tetr *tetr, int nb_tetr);
 void					ft_writer(char **tab, t_tetr *tetr, int ty, int tx);
 void					ft_remover(char **tab, t_tetr *tetr, int ty, int tx);

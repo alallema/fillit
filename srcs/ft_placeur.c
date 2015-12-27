@@ -6,7 +6,7 @@
 /*   By: schiad <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/19 13:47:11 by schiad            #+#    #+#             */
-/*   Updated: 2015/12/19 20:08:23 by schiad           ###   ########.fr       */
+/*   Updated: 2015/12/27 17:28:01 by schiad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,27 +18,25 @@ int		ft_placeur(char **tab, t_tetr *tetr, int nb_tetr)
 	int	x;
 	int	placed;
 
-	y = 0;
-	while (tab[y])
+	y = -1;
+	while (tab[++y])
 	{
-		x = 0;
-		while (tab[y][x])
+		x = -1;
+		while (tab[y][++x])
 		{
 			if (ft_check_place(tab, tetr, y, x))
 			{
 				placed = 1;
 				ft_writer(tab, tetr, y, x);
-				if (!tetr->next)
-					return (placed);
-				else
+				if (tetr->next)
 					if ((nb_tetr - 1) == (placed = ft_placeur(tab
 									, tetr->next, nb_tetr - 1)))
 						return (placed + 1);
+				if (!tetr->next)
+					return (placed);
 				ft_remover(tab, tetr, y, x);
 			}
-			x++;
 		}
-		y++;
 	}
 	return (0);
 }

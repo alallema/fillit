@@ -1,0 +1,39 @@
+[33m
+  ===================
+  |  Projet Fillit  |
+  ===================
+[39m
+[32m  Verification de la norme[39m
+
+Norme: ./srcs/ft_create_elem.c
+Norme: ./srcs/ft_lst_pushback.c
+Norme: ./srcs/ft_read_file.c
+Error (line 43): declarations must be followed by one empty line in ft_read_file
+Error (line 43): function ft_read_file has 31 lines
+Error (line 49): C++ comment
+Error (line 50): Empty line
+Error (line 68): C++ comment
+Error (line 69): C++ comment
+Error (line 70): C++ comment
+Error (line 71): C++ comment
+Error (line 72): C++ comment
+Norme: ./srcs/ft_print_list.c
+Norme: ./srcs/ft_create_pattern.c
+Norme: ./srcs/ft_check_pattern.c
+Error (line 16): function ft_check_pattern has 28 lines
+Norme: ./srcs/ft_lst_size.c
+Norme: ./srcs/ft_resolver.c
+Norme: ./srcs/ft_check_place.c
+Norme: ./srcs/ft_placeur.c
+Norme: ./srcs/ft_writer.c
+Norme: ./srcs/ft_remover.c
+Norme: ./srcs/ft_square_char_tab.c
+Norme: ./srcs/ft_square_char_filler.c
+Norme: ./srcs/ft_print_result.c
+Norme: ./srcs/ft_free_square.c
+Norme: ./srcs/ft_free_elements.c
+Norme: ./incs/libft.h
+Norme: ./incs/main.h
+Norme: ./main.c
+[31m  
+Total errors :[39m 10
