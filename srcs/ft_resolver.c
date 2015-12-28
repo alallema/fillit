@@ -6,7 +6,7 @@
 /*   By: schiad <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/12 16:05:09 by schiad            #+#    #+#             */
-/*   Updated: 2015/12/26 17:29:52 by schiad           ###   ########.fr       */
+/*   Updated: 2015/12/28 18:01:13 by schiad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,13 @@ void		ft_resolver(t_tetr *tetr, int nb)
 	retour = 0;
 	tab = ft_square_char_tab(33);
 	i = 0;
-	while (((i / 2) * (i / 2)) < nb)
-		i++;
-	i--;
+//	while (((i / 2) * (i / 2)) < nb)
+//		i++;
+//	i--;
 	while (!retour)
 	{
+		ft_putnbr(i);
+		ft_putchar('\n');
 		ft_square_char_filler(tab, i);
 		retour = ft_placeur(tab, tetr, nb);
 		i++;
