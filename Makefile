@@ -6,7 +6,7 @@
 #    By: rpallies <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/24 12:56:26 by rpallies          #+#    #+#              #
-#    Updated: 2015/12/26 17:21:33 by schiad           ###   ########.fr        #
+#    Updated: 2016/01/03 17:04:26 by schiad           ###   ########.fr        #
 #    Updated: 2015/12/19 14:17:47 by schiad           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
@@ -45,7 +45,8 @@ SRCS =		ft_create_elem.c		\
 			ft_square_char_filler.c	\
 			ft_print_result.c		\
 			ft_free_square.c		\
-			ft_free_elements.c	
+			ft_free_elements.c		\
+			ft_nb_dots.c
 
 
 SRCC =		$(addprefix $(SDIR),$(SRCS))
