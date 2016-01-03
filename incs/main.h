@@ -6,7 +6,7 @@
 /*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/09 13:12:20 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/27 17:20:17 by schiad           ###   ########.fr       */
+/*   Updated: 2016/01/03 17:05:17 by schiad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ char					**ft_square_char_tab(int nb);
 void					ft_square_char_filler(char **tab, int nb);
 void					ft_print_result(char **tab);
 void					ft_free_square(char **tab);
+int						ft_nb_dots(char **tab);
 
 t_tetr					*ft_create_elem(int **pattern, char letter);
 void					ft_free_elements(t_tetr *elem);
