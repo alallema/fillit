@@ -18,7 +18,7 @@ void		ft_square_char_filler(char **tab, int nb)
 	int		j;
 	char	*tmp;
 
-	j = 34;
+	j = 33;
 	while (j)
 	{
 		j--;

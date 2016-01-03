@@ -33,6 +33,7 @@ void		ft_resolver(t_tetr *tetr, int nb)
 		ft_print_result(tab);
 		ft_putnbr(dots = ft_nb_dots(tab));
 		ft_putchar('\n');
+		ft_putstr("end");
 	}
 	if (!retour)
 		i++;
