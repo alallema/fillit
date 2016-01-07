@@ -6,7 +6,7 @@
 /*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/18 11:50:21 by alallema          #+#    #+#             */
-/*   Updated: 2015/12/20 14:55:10 by schiad           ###   ########.fr       */
+/*   Updated: 2016/01/07 11:35:44 by alallema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,9 @@ void	ft_check_pattern(int **pattern)
 		}
 		if (k != 0)
 		{
-			i = 0;
-			while (i < 4)
-			{
+			i = -1;
+			while (i++ < 4)
 				pattern[i][j] = (pattern[i][j] - k);
-				i++;
-			}
 		}
 		else if (i != 4 && j == 1)
 			return ;

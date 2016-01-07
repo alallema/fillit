@@ -6,7 +6,7 @@
 /*   By: alallema <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/09 13:12:20 by alallema          #+#    #+#             */
-/*   Updated: 2016/01/03 17:05:17 by schiad           ###   ########.fr       */
+/*   Updated: 2016/01/07 11:37:27 by alallema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ t_tetr					*ft_create_elem(int **pattern, char letter);
 void					ft_free_elements(t_tetr *elem);
 void					ft_lst_pushback(t_tetr **begin_list, int **data);
 int						ft_lst_size(t_tetr *tetr);
-void					ft_print_list(t_tetr *tetr);
 t_tetr					*ft_create_list(char *s, int n);
 t_tetr					*ft_check_tab(char *s, int n);
 t_tetr					*ft_create_list(char *tab, int n);

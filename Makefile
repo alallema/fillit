@@ -3,11 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rpallies <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: alallema <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2015/11/24 12:56:26 by rpallies          #+#    #+#              #
-#    Updated: 2016/01/03 17:04:26 by schiad           ###   ########.fr        #
-#    Updated: 2015/12/19 14:17:47 by schiad           ###   ########.fr        #
+#    Created: 2016/01/07 11:44:18 by alallema          #+#    #+#              #
+#    Updated: 2016/01/07 11:44:26 by alallema         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +31,6 @@ SDIR =		./srcs/
 SRCS =		ft_create_elem.c		\
 			ft_lst_pushback.c		\
 			ft_read_file.c			\
-			ft_print_list.c			\
 			ft_create_pattern.c		\
 			ft_check_pattern.c		\
 			ft_lst_size.c			\
